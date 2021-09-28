@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Home from '../pages/Home';
 import Register from '../pages/Register';
+import Login from '../pages/Login';
 import NoOnboarding from '../pages/NoOnboarding';
 
 function App() {
@@ -19,6 +20,12 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/slack/authenticate">
+          <Login />
         </Route>
         <Route path="/register">
           <Register />
